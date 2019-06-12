@@ -1,15 +1,4 @@
-import React, { Component } from "react";
-import { string } from "prop-types";
-import "./Paragraph.css";
+import React from "react";
 
-class Paragraph extends Component {
-  static propTypes = {
-    paragraph: string
-  };
-
-  render() {
-    const { paragraph } = this.props;
-    return <p>{paragraph}</p>;
-  }
-}
+const Paragraph = ({ paragraph }) => <p>{paragraph}</p>;
 export default Paragraph;

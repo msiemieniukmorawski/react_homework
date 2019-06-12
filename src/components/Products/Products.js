@@ -1,28 +1,13 @@
 import React, { Component } from "react";
-import { string, shape, arrayOf, bool } from "prop-types";
-import "./Products.css";
-import Product from "../Product/Product";
+import ProductContainer from "../../containers/ProductContainer/ProductContainer";
 
 class Products extends Component {
-  static myPropTypes = {
-    data: arrayOf(
-      shape({
-        amount: string,
-        category: string,
-        featured: bool,
-        id: string,
-        manufacture: string,
-        name: string
-      })
-    )
-  };
-
   render() {
     const { data } = this.props;
     return (
       <div className="products">
         {data.map(product => (
-          <Product key={product.id} data={product} />
+          <ProductContainer key={product.id} data={product} />
         ))}
       </div>
     );

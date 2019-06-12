@@ -44,7 +44,13 @@ class HomePage extends Component {
 
   render() {
     const { key, value } = this.state;
-    let products = ProductsServices.getProduct(key, value);
+    const { products } = this.props;
+
+    let productsAll = ProductsServices.getProduct(
+      key,
+      value,
+      products.products
+    );
     return (
       <Container>
         <Title title="Catalog" />
@@ -62,7 +68,7 @@ class HomePage extends Component {
           </div>
 
           <div className="column-right">
-            <Products data={products} />
+            <Products data={productsAll} />
           </div>
         </div>
       </Container>

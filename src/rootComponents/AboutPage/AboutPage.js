@@ -1,17 +1,14 @@
-import React, { Component } from "react";
-import "./AboutPage.css";
+import React from "react";
 import Title from "../../components/Title/Title";
 import Paragraph from "../../components/Paragraph/Paragraph";
 import Container from "../../components/Container/Container";
 
-class AboutPage extends Component {
-  render() {
-    return (
-      <Container>
-        <Title title={"About"} />
-
-        <Paragraph
-          paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+const AboutPage = () => {
+  return (
+    <Container>
+      <Title title={"About"} />
+      <Paragraph
+        paragraph={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
           scelerisque odio pharetra, rhoncus velit eget, feugiat magna. Integer
           ac augue aliquam, tempor diam nec, pulvinar velit. Pellentesque et sem
           a diam fringilla egestas nec vel metus. Etiam ac convallis leo.
@@ -21,10 +18,10 @@ class AboutPage extends Component {
           dignissim at in odio. Ut consectetur purus et maximus aliquam. Sed
           consectetur diam quis accumsan condimentum. Proin porta condimentum
           velit quis convallis.`}
-        />
+      />
 
-        <Paragraph
-          paragraph={`Donec mauris tellus, lobortis id dignissim id, luctus ut purus. Etiam
+      <Paragraph
+        paragraph={`Donec mauris tellus, lobortis id dignissim id, luctus ut purus. Etiam
           rutrum nibh consectetur purus tincidunt scelerisque. Etiam faucibus
           volutpat lectus, quis blandit diam consectetur ac. In hac habitasse
           platea dictumst. Sed rhoncus mattis condimentum. Vivamus sit amet mi
@@ -33,9 +30,9 @@ class AboutPage extends Component {
           malesuada nunc scelerisque nec. Aliquam vel dolor diam. Cras efficitur
           dignissim justo, ac tristique tellus pellentesque pharetra. Quisque
           pharetra lectus molestie, posuere lectus eget, tempor justo.`}
-        />
-      </Container>
-    );
-  }
-}
+      />
+    </Container>
+  );
+};
+
 export default AboutPage;

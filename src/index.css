@@ -44,10 +44,19 @@ html, body {
     margin: 0;
     overflow: hidden;
     list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 
-.nav > li {
-    float: left;
+.nav > li:last-of-type {
+    margin-left: auto;
+    position: relative;
+}
+.nav > li:last-of-type span{
+    position: absolute;
+    top:33%;
+    left:50%;
+    transform: translate(-50%);
 }
 
 .nav > li > a {
@@ -58,7 +67,11 @@ html, body {
     display: block;
     text-decoration: none;
 }
-
+#Capa_1{
+    width: 100%;
+    max-width: 40px;
+    fill: #fff;
+}
 /* Navbars */
 
 /* Footer */
@@ -101,6 +114,15 @@ footer {
     color: #00a1b4;
     padding: 3px 0px;
 }
+
+.product a{
+    text-decoration: none;
+    color: #0b102b;
+    transition: 0.3s all;
+}
+.product a:hover{
+    color: #00a1b4;
+}
 /* Products */
 
 
@@ -135,6 +157,77 @@ footer {
 .column-right {
     width: 75%;
 }
-
+.product .button {
+    padding-bottom: 10px;
+    text-align: center;
+}
+.product .button a{
+    display: inline-block;
+    padding: 7px 0;
+    background: #00a1b4;
+    transition: 0.3s all;
+    text-align: center;
+    max-width: 140px;
+    width: 100%;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+}
+.product .button a:hover{
+    background: #0b102b;
+}
 /* Catalog */
 
+/* SingleProductPage */
+.row{
+    display: flex;
+}
+.half{
+    width: 50%;
+    padding:0 20px;
+}
+.half img{
+    max-width: 100%;
+}
+
+/* SingleProductPage */
+
+/* Basket */
+.row{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #0b102b;
+    padding:10px 0 15px;
+    align-items: center;
+}
+.basket_images{
+    width: 20%;
+    padding: 0 10px;
+}
+.basket_images img{
+    max-width: 100%;
+}
+.basket_name{
+    font-size: 1.3rem;
+    width: 40%;
+    padding: 0 10px;
+
+}
+.basket_price{
+    font-size: 1.3rem;
+    width: 30%;
+    padding: 0 10px;
+}
+.basket_del{
+    width: 10%;
+    padding: 0 10px;
+    margin-left: auto;
+}
+.basket_del a{
+    cursor: pointer;
+}
+.basket_del #Capa_1{
+    fill: red;
+}
+/* Basket */
